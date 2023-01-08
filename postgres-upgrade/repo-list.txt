@@ -7,7 +7,4 @@ partner-management-services
 admin-services
 keymanager
 audit-manager
-resident-services
-mosip-compliance-toolkit
-digital-card-service
-idp
+#
