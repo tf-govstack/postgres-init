@@ -7,7 +7,7 @@ on:
       - 1.*
       - develop
       - release*
-      - tf*
+      - tf-develop*
 
 jobs:
   build-postgres-init-docker:
