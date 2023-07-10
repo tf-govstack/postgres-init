@@ -31,13 +31,15 @@ jobs:
 
       - name: clone all repos
         run: |
-          cd "./${{env.SERVICE_LOCATION}}"
+          #cd "./${{env.SERVICE_LOCATION}}"
+          cd "./tf-govstack
           chmod +x ./get_db_data.sh
           bash ./get_db_data.sh ${{ env.BRANCH_NAME }}
 
       - name: Build image
         run: |
-          cd "./${{env.SERVICE_LOCATION}}"
+          #cd "./${{env.SERVICE_LOCATION}}"
+          cd "./tf-govstack
           docker build . --file Dockerfile --tag ${{ env.SERVICE_NAME }}
 
       - name: Log into registry
