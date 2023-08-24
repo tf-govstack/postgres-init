@@ -6,7 +6,7 @@ RUN apt-get install -y python3-pip
 RUN pip3 install xlrd
 RUN apt-get install -y libpq-dev python-dev
 RUN pip3 install psycopg2
-WORKDIR /home/mosip/repos/db_release_scripts
+WORKDIR /home/tf-govstack/repos/db_release_scripts
 
 COPY ./repos/commons/db_release_scripts .
 COPY ./repos/pre-registration/db_release_scripts .
@@ -40,7 +40,7 @@ ENV UPGRADE_VERSION=
 
 ENV REVOKE_VERSION=
 
-WORKDIR /home/mosip/repos/db_release_scripts/
+WORKDIR /home/tf-govstack/repos/db_release_scripts/
 
 CMD if [ "$RELEASE_FLAG" = "upgrade" ]; then \
   cd $MOSIP_DB_NAME; bash upgrade.sh $CURRENT_VERSION $UPGRADE_VERSION ; \
