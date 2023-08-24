@@ -5,7 +5,7 @@ RUN apt-get install -y python3
 RUN apt-get install -y python3-pip
 RUN pip3 install xlrd
 
-WORKDIR /home/mosip/repos/db_scripts
+WORKDIR /home/tf-govstack/repos/db_scripts
 
 COPY ./repos/commons/db_scripts .
 COPY ./repos/pre-registration/db_scripts .
@@ -40,7 +40,7 @@ ENV DML_FLAG=
 
 ENV ENV_VERSION_FLAG=false
 
-WORKDIR /home/mosip/repos/db_scripts/
+WORKDIR /home/tf-govstack/repos/db_scripts/
 
 CMD if [ "$ENV_VERSION_FLAG" = "false" ]; then \
   cd $MOSIP_DB_NAME;bash deploy.sh ; \
