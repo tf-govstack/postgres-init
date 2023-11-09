@@ -18,6 +18,14 @@ elif [ $REPO_NAME == "digital-card-service" ]
 then
 branch=develop
 git clone -b $branch https://github.com/tf-govstack/$REPO_NAME.git ./repos/$REPO_NAME
+elif [ $REPO_NAME == "admin-services" ]
+then
+branch=tf-develop
+git clone -b $branch https://github.com/tf-govstack/$REPO_NAME.git ./repos/$REPO_NAME
+elif [ $REPO_NAME == "id-repository" ]
+then
+branch=tf-develop
+git clone -b $branch https://github.com/tf-govstack/$REPO_NAME.git ./repos/$REPO_NAME
 elif [ $REPO_NAME == "esignet" ]
 then
 branch=1.0.0
