@@ -10,7 +10,7 @@ ARG branch=1.2.0.1
 #LABEL commit_id=${COMMIT_ID}
 #LABEL build_time=${BUILD_TIME}
 
-ARG container_user=mosip
+ARG container_user=tf-govstack
 ARG container_user_group=mosip
 ARG container_user_uid=1001
 ARG container_user_gid=1001
